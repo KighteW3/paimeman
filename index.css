@@ -1,0 +1,110 @@
+.viewport {
+	width: 100%;
+	height: 100%;
+	font-family: sans-serif;
+	background-color: #555;
+}
+
+.nav {
+	position: initial;
+	display: flex;
+	width: 100%;
+	height: 80px;
+	background-color: #efefef;
+	z-index: 1000;
+}
+
+@keyframes navMinimize {
+	0%{
+		height: 80px;
+	}
+	100%{
+		height: 50px;
+	}
+}
+
+@keyframes navMaximize {
+	from{
+		height: 50px;
+	}
+	to{
+		height: 80px;
+	}
+}
+
+.nav-child {
+	width: 50%;
+	height: 100%;
+}
+
+.nav-child ul li {
+	cursor: pointer;
+	font-size: x-large;
+	user-select: none;
+}
+
+.nav-link-list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav-link-list ul {
+	width: 100%;
+	height: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.contact-list {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+
+.contact-list ul {
+	width: 50%;
+	height: 100%;
+	list-style: none;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+.first-article {
+	height: 1500px;
+}
+
+.cover-proyect-container {
+	width: 100%;
+	height: 700px;
+}
+
+.cover-proyect-background {
+	position: absolute;
+	width: inherit;
+	height: inherit;
+	object-fit: cover;
+	object-position: center;
+	filter: brightness(0.5);
+}
+
+.cover-proyect {
+	width: inherit;
+	height: inherit;
+	background: none;
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+.cover-proyect-img {
+	width: 400px;
+	filter:brightness(0.8);
+}
