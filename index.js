@@ -17,6 +17,12 @@ let charactersButton = document.querySelectorAll(".characters-button");
 let charactersButtonString = document.querySelectorAll(".characters-button-string");
 let charactersButtonImg = document.querySelectorAll(".characters-button-img");
 
+let ediciónPlate = document.querySelectorAll(".edición-plate");
+let ediciónPlateBox = document.querySelectorAll(".edición-plate-2-1");
+let ediciónPlateImg = document.querySelectorAll(".edición-plate-1-1-img");
+let ediciónPlateBorder = document.querySelectorAll(".edición-plate-1-2-border");
+let ediciónPlateText = document.querySelectorAll("edición-plate-1-2-text-container");
+
 const multipleNodeColorConverter = (varName,color)=>{
 	for (let i=0; i<varName.length; i++) {
 		varName[i].style.color = `${color}`;
@@ -38,7 +44,6 @@ document.addEventListener("scroll", ()=>{
 		navBarMaximize();
 	}
 	let rectCoverTitle = coverTitleContainer.getBoundingClientRect();
-	console.log(rectCoverTitle);
 	if (rectCoverTitle.top <= 600 && rectCoverTitle.top >= 20) {
 		paimemanTitleFall();
 	}
@@ -50,7 +55,26 @@ document.addEventListener("scroll", ()=>{
 	if (rectCharPlate.top <= 420 && rectCharPlate.top >= 48) {
 		displayCharactersPlates();
 	}
+	ediciónAnimation(0);
+	ediciónAnimation(1);
+	ediciónAnimation(2);
 })
+
+function ediciónAnimation(wichPlate) {
+	let rectEdiciónPlate = ediciónPlate[wichPlate].getBoundingClientRect();
+	let rectEdiciónPlateImg = ediciónPlateImg[wichPlate].getBoundingClientRect();
+	let rectEdiciónPlateBorder = ediciónPlateBorder[wichPlate].getBoundingClientRect();
+	console.log(rectEdiciónPlateBorder.top);
+	if (rectEdiciónPlateImg.top <= 371 && rectEdiciónPlateImg.top >= 61) {
+		ediciónPlateImg[wichPlate].style.animation = "edicionesPlateImgDisplay 1s forwards";
+	}
+	if (rectEdiciónPlate.top <= 371 && rectEdiciónPlate.top >= 61) {
+		ediciónPlateBox[wichPlate].style.animation = "ediciónPlateDisplay 1s forwards"
+	}
+	if (rectEdiciónPlateBorder.top <= 663 && rectEdiciónPlateBorder.top >= 61) {
+		ediciónPlateBorder[wichPlate].style.animation = "edicionesPlateTextDisplay 1s forwards";
+	}
+}
 
 const navBarMinimize = ()=>{
 	navBar.style.position = "fixed"
