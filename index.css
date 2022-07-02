@@ -232,14 +232,17 @@
 }
 .characters-2-display {
 	transform: translate(1000px,0);
+	display: none;
 }
 
 @keyframes characterPlate2 {
 	from {
+		display: none;
 		transform: translate(1000px,0);
 		opacity: 0;
 	}
 	to {
+		display: flex;
 		transform: translate(0,0);
 		opacity: 1;
 	}
@@ -334,6 +337,15 @@
 .second-article {
 	background-color: #999;
 	height: 4000px;
+}
+
+#muñecoPesao {
+	position: fixed;
+	right: 0;
+	z-index: 800;
+	width: 100px;
+	height: 100px;
+	background-color: #aa0000;
 }
 
 .ediciones-container {
@@ -450,18 +462,20 @@
 	height: 80%;
 	background-color: #1f1f1f;
 	border-radius: 20px 0 0 20px;
-	display: flex;
 	justify-content: center;
 	align-items: center;
 	color: #efefef;
+	display: none;
 	transform: translate(1000px,0);
 }
 
 @keyframes ediciónPlateDisplay {
 	from {
+		display: flex;
 		transform: translate(1000px,0);
 	}
 	to {
+		display: flex;
 		transform: translate(0);
 	}
 }

@@ -62,14 +62,14 @@ document.addEventListener("scroll", ()=>{
 
 function ediciónAnimation(wichPlate) {
 	let rectEdiciónPlate = ediciónPlate[wichPlate].getBoundingClientRect();
-	let rectEdiciónPlateImg = ediciónPlateImg[wichPlate].getBoundingClientRect();
 	let rectEdiciónPlateBorder = ediciónPlateBorder[wichPlate].getBoundingClientRect();
 	console.log(rectEdiciónPlateBorder.top);
-	if (rectEdiciónPlateImg.top <= 371 && rectEdiciónPlateImg.top >= 61) {
+	if (rectEdiciónPlate.top <= 371 && rectEdiciónPlate.top >= 61) {
 		ediciónPlateImg[wichPlate].style.animation = "edicionesPlateImgDisplay 1s forwards";
 	}
 	if (rectEdiciónPlate.top <= 371 && rectEdiciónPlate.top >= 61) {
 		ediciónPlateBox[wichPlate].style.animation = "ediciónPlateDisplay 1s forwards"
+		ediciónPlateBox[wichPlate].style.display = "flex";
 	}
 	if (rectEdiciónPlateBorder.top <= 663 && rectEdiciónPlateBorder.top >= 61) {
 		ediciónPlateBorder[wichPlate].style.animation = "edicionesPlateTextDisplay 1s forwards";
@@ -104,7 +104,9 @@ const proyectTextOpacity = ()=>{
 
 const displayCharactersPlates = ()=>{
 	charactersDisplay[0].style.animation = "characterPlate1 0.8s forwards";
+	charactersDisplay[0].style.display = "grid";
 	charactersDisplay[1].style.animation = "characterPlate2 0.8s forwards";
+	charactersDisplay[1].style.display = "grid";
 }
 
 // Events to characters plate button interact.
