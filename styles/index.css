@@ -349,15 +349,11 @@
 	background-color: #aa0000;
 }
 
-.muñeco-pesao-img {
-	width: 100%;
-}
-
 #muñeco-pesao-diálogo {
 	position: fixed;
 	z-index: 600;
-	width: 80px;
-	height: 40px;
+	width: 100px;
+	height: 100px;
 	opacity: 0;
 	display: none;
 	transform: translate(-1000px,-1880px);

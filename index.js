@@ -17,6 +17,9 @@ let charactersButton = document.querySelectorAll(".characters-button");
 let charactersButtonString = document.querySelectorAll(".characters-button-string");
 let charactersButtonImg = document.querySelectorAll(".characters-button-img");
 
+let secondArticle = document.querySelector(".second-article");
+let muñecoPesao = document.getElementById("muñeco-pesao");
+let muñecoPesaoImg = document.querySelector(".muñeco-pesao-img");
 let ediciónPlate = document.querySelectorAll(".edición-plate");
 let ediciónPlateBox = document.querySelectorAll(".edición-plate-2-1");
 let ediciónPlateImg = document.querySelectorAll(".edición-plate-1-1-img");
@@ -58,12 +61,14 @@ document.addEventListener("scroll", ()=>{
 	ediciónAnimation(0);
 	ediciónAnimation(1);
 	ediciónAnimation(2);
+	let rectSecondArticle = secondArticle.getBoundingClientRect();
+	if (rectSecondArticle.top <= 226 && rectSecondArticle.top >= (-1076)) {
+	}
 })
 
 function ediciónAnimation(wichPlate) {
 	let rectEdiciónPlate = ediciónPlate[wichPlate].getBoundingClientRect();
 	let rectEdiciónPlateBorder = ediciónPlateBorder[wichPlate].getBoundingClientRect();
-	console.log(rectEdiciónPlateBorder.top);
 	if (rectEdiciónPlate.top <= 371 && rectEdiciónPlate.top >= 61) {
 		ediciónPlateImg[wichPlate].style.animation = "edicionesPlateImgDisplay 1s forwards";
 	}
