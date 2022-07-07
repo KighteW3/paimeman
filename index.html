@@ -8,24 +8,36 @@
 	<link rel="stylesheet" href="styles/normalize.css">
 </head>
 <body>
-	<div class="viewport">
+	<div id="viewport">
 		<div class="nav">
 			<div class="nav-child nav-link-list">
 				<ul>
-					<li class="nav-links">Inicio</li>
-					<li class="nav-links">Ediciones</li>
-					<li class="nav-links">Lore</li>
-					<li class="nav-links">Comprar</li>
+					<li class="nav-links">
+						<a href="index.html">Inicio</a>
+					</li>
+					<li class="nav-links">
+						<a href="#second-article">Ediciones</a>
+					</li>
+					<li class="nav-links">
+						<a href="">Galería</a>
+					</li>
+					<li class="nav-links">
+						<a href="">Compras</a>
+					</li>
 				</ul>
 			</div>
 			<div class="nav-child contact-list">
 				<ul>
-					<li class="nav-links">Quiénes somos</li>
-					<li class="nav-links">Más info</li>
+					<li class="nav-links">
+						<a href="">Quienes somos</a>
+					</li>
+					<li class="nav-links">
+						<a href="">Más info</a>
+					</li>
 				</ul>
 			</div>
 		</div>
-		<div class="first-article">
+		<div id="first-article">
 			<div class="cover-proyect-container">
 				<img class="cover-proyect-background" src="sources/img/Inicio/background.gif">
 				<div class="cover-proyect">
@@ -92,11 +104,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="second-article">
+		<div id="second-article">
 			<div id="muñeco-pesao">
 				<img class="muñeco-pesao-img" src="sources/img/Ediciones/deadpoolXD.png">
 			</div>
-			<div id="muñeco-pesao-diálogo"></div>
+			<div id="muñeco-pesao-diálogo">
+				<p>¡Estos son los cómics!</p>
+			</div>
 			<div class="ediciones-container">
 				<div class="ediciones-bar-introduction"></div>
 				<div class="ediciones-plate-general-container">
@@ -177,7 +191,35 @@
 				</div>
 			</div>
 		</div>
+		<div id="thirty-article">
+			<div class="galería-introduction-container">
+				<div class="galería-introduction-title">
+					<h2 class="galería-introduction-title-h2">Galería</h2>
+				</div>
+				<div class="galería-introduction"></div>
+			</div>
+			<div class="galería-container">
+				<div class="galería">
+					<img class="galería-img" src="./sources/img/Galería/IMG-20220706-WA0010.jpg" alt="">
+					<img class="galería-img" src="./sources/img/Galería/IMG-20220706-WA0011.jpg" alt="">
+					<img class="galería-img" src="./sources/img/Galería/IMG-20220706-WA0012.jpg" alt="">
+					<img class="galería-img" src="./sources/img/Galería/IMG-20220706-WA0013.jpg" alt="">
+					<img class="galería-img" src="./sources/img/Galería/IMG-20220706-WA0014.jpg" alt="">
+					<img class="galería-img" src="./sources/img/Galería/IMG-20220706-WA0015.jpg" alt="">
+					<img class="galería-img" src="./sources/img/Galería/IMG-20220706-WA0016.jpg" alt="">
+					<img class="galería-img" src="./sources/img/Galería/IMG-20220706-WA0017.jpg" alt="">
+					<img class="galería-img" src="./sources/img/Galería/W1.jpeg">
+					<img class="galería-img" src="./sources/img/Galería/W2.jpeg">
+					<img class="galería-img" src="./sources/img/Galería/W3.jpeg">
+					<img class="galería-img" src="./sources/img/Galería/W4.jpeg">
+					<img class="galería-img" src="./sources/img/Galería/W5.jpeg">
+					<img class="galería-img" src="./sources/img/Galería/W6.jpeg">
+					<img class="galería-img" src="./sources/img/Galería/W7.jpeg">
+					<img class="galería-img" src="./sources/img/Galería/W8.jpeg">
+				</div>
+			</div>
+		</div>
 	</div>
-	<script src="index.js"></script>
+	<script src="scripts/index.js"></script>
 </body>
 </html>
