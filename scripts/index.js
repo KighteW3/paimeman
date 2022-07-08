@@ -29,7 +29,7 @@ let ediciónPlateImg = document.querySelectorAll(".edición-plate-1-1-img");
 let ediciónPlateBorder = document.querySelectorAll(".edición-plate-1-2-border");
 let ediciónPlateText = document.querySelectorAll("edición-plate-1-2-text-container");
 
-let thirtyArticle = document.getElementById("thirty-article");
+let thirdArticle = document.getElementById("third-article");
 let galeríaIntroductionTitle = document.querySelector(".galería-introduction-title-h2");
 let galeríaImg = document.querySelectorAll(".galería-img");
 
@@ -80,7 +80,7 @@ document.addEventListener("scroll", ()=>{
 		muñecoPesao.style.opacity = "1";
 		setTimeout(muñecoPesaoDiálogoHide, 500)
 	}
-	let rectThirtyArticle = thirtyArticle.getBoundingClientRect();
+	let rectThirtyArticle = thirdArticle.getBoundingClientRect();
 	console.log(rectThirtyArticle.top);
 	if (rectThirtyArticle.top <= 265 && rectThirtyArticle.top >= -11) {
 		galeríaIntroductionTitle.style.animation = "galeríaIntroductionTitle 1s infinite alternate"
