@@ -683,6 +683,38 @@ html {
 
 .compras-container {
 	width: 100%;
-	height: 500px;
 	background: #dfef1f;
+}
+
+.compras-title {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	color: #1f1f1f;
+}
+
+.compras-title-h2 {
+	letter-spacing: 2px;
+	font-weight: 300px;
+	margin: 120px;
+}
+
+.compras-content {
+	width: 100%;
+}
+
+.compras-plates-container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
+}
+
+.compras-plates {
+	width: 450px;
+	height: 600px;
+	background: #1f1f1f;
+	box-shadow: 13px 13px 5px #000;
 }

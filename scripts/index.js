@@ -1,4 +1,4 @@
-alert('Atención: esta página sigue en desarrollo, por lo tanto está incompleta y puede presentar errores.')
+// alert('Atención: esta página sigue en desarrollo, por lo tanto está incompleta y puede presentar errores.')
 
 // Variables linked to the DOM.
 
