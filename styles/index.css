@@ -695,6 +695,7 @@ html {
 	align-items: center;
 	font-size: 40px;
 	color: #1f1f1f;
+	text-align: center;
 }
 
 .compras-title-h2 {
@@ -712,6 +713,7 @@ html {
 	justify-content: space-evenly;
 	align-items: center;
 	width: 100%;
+	flex-wrap: wrap;
 }
 
 .compras-plates {
