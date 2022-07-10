@@ -679,8 +679,25 @@ html {
 
 #fourth-article {
 	width: 100%;
-	height: 4000px;
 	background-color: #888;
+}
+
+.compras-button-fake-container {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	background: #2225;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.compras-button-fake {
+	width: 40%;
+	height: 300px;
+	background-color: #eee;
+	position: fiexd;
 }
 
 .compras-container {
@@ -766,9 +783,81 @@ html {
 .compras-plates-button-a {
 	padding: 20px 50px;
 	text-decoration: none;
-	background-color: #d11f1f;
+	background: linear-gradient(#d11d1d, #aa0000);
 	color: #333;
 	border-radius: 15px;
 	border: 2px solid #ef2;
 	user-select: none;
+}
+
+.compras-plates-button-a:hover {
+	background: linear-gradient(#aa0000, #d11d1d);
+	cursor: pointer;
+}
+
+.compras-bottom-separator {
+	width: 100%;
+	height: 200px;
+	background: none;
+}
+
+#fifth-article {
+	width: 100%;
+	height: 4000px;
+	background-color: #888
+}
+
+.whoami-container {
+	width: 100%;
+	background-color: #1f1f1f;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.whoami {
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	color: #dfdfdf;
+	margin: 120px 0;
+}
+
+.whoami-text {
+	margin: 50px 0;
+}
+
+.whoami-h2 {
+	font-size: 5em;
+	letter-spacing: 20px;
+	opacity: 0;
+}
+
+.whoami-p {
+	color: #bbb;
+	font-size: 25px;
+	opacity: 0;
+}
+
+@keyframes whoamiH2Appear {
+	0% {
+		opacity: 0;
+		letter-spacing: 20px;
+	}
+	100% {
+		opacity: 1;
+		letter-spacing: 0;
+	}
+}
+
+@keyframes whoamiTextAppear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity:1;
+	}
 }

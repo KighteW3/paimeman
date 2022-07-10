@@ -33,6 +33,13 @@ let thirdArticle = document.getElementById("third-article");
 let galeríaIntroductionTitle = document.querySelector(".galería-introduction-title-h2");
 let galeríaImg = document.querySelectorAll(".galería-img");
 
+let comprasButtonFakeContainer = document.querySelector('.compras-button-fake-container');
+let comprasButtonFake = document.querySelector('.compras-button-fake');
+let comprasButton = document.querySelectorAll(".compras-plates-button-a");
+
+let whoamiH2 = document.querySelector(".whoami-h2");
+let whoamiText = document.querySelector(".whoami-p");
+
 const multipleNodeColorConverter = (varName,color)=>{
 	for (let i=0; i<varName.length; i++) {
 		varName[i].style.color = `${color}`;
@@ -81,9 +88,17 @@ document.addEventListener("scroll", ()=>{
 		setTimeout(muñecoPesaoDiálogoHide, 500)
 	}
 	let rectThirtyArticle = thirdArticle.getBoundingClientRect();
-	console.log(rectThirtyArticle.top);
 	if (rectThirtyArticle.top <= 265 && rectThirtyArticle.top >= -11) {
 		galeríaIntroductionTitle.style.animation = "galeríaIntroductionTitle 1s infinite alternate"
+	}
+	let rectWhoamiH2 = whoamiH2.getBoundingClientRect();
+	if (rectWhoamiH2.top <= 368 && rectWhoamiH2.top >= 55) {
+		whoamiH2.style.animation = "whoamiH2Appear 1s forwards";
+	}
+	let rectWhoamiText = whoamiText.getBoundingClientRect();
+	console.log(rectWhoamiText.top);
+	if (rectWhoamiText.top <= 386 && rectWhoamiText.top >= 44) {
+		whoamiText.style.animation = "whoamiTextAppear 1s forwards";
 	}
 })
 
@@ -182,11 +197,18 @@ function edicionesAnimation(wichPlate) {
 	}
 }
 
-console.log(galeríaImg);
-
 for (i=0;i<galeríaImg.length;i++) {
 	let x = i;
 	galeríaImg[i].addEventListener('click', ()=>{
 		window.open(galeríaImg[x].src);
+	})
+}
+
+for (i=0; i<comprasButton.length; i++) {
+	comprasButton[i].addEventListener('click', (e)=>{
+		comprasButtonFakeContainer.style.display = 'flex';
+		comprasButtonFake.style.display = 'inline';
+		body.style.height = '100%';
+		body.style.overflowY = 'hidden';
 	})
 }
