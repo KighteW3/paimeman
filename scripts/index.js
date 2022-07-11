@@ -36,10 +36,12 @@ let galeríaImg = document.querySelectorAll(".galería-img");
 let comprasButtonFakeContainer = document.querySelector('.compras-button-fake-container');
 let comprasButtonFake = document.querySelector('.compras-button-fake');
 let comprasButton = document.querySelectorAll(".compras-plates-button-a");
-let comprasButtonFakeQuit = document.querySelector(".compras-button-fake-quit");
+let comprasButtonFakeQuit = document.querySelector('.compras-button-fake-quit')
 
 let whoamiH2 = document.querySelector(".whoami-h2");
 let whoamiText = document.querySelector(".whoami-p");
+
+let audioCDC = new Audio('./sources/videos/caramelo_de_chocolate.mp3')
 
 const multipleNodeColorConverter = (varName,color)=>{
 	for (let i=0; i<varName.length; i++) {
@@ -208,14 +210,24 @@ for (i=0;i<galeríaImg.length;i++) {
 for (i=0; i<comprasButton.length; i++) {
 	comprasButton[i].addEventListener('click', ()=>{
 		comprasButtonFakeContainer.style.display = 'flex';
-		comprasButtonFake.style.display = 'inline';
 		body.style.height = '100%';
 		body.style.overflowY = 'hidden';
+		audioCDC.play();
 	})
 }
 
+comprasButtonFakeQuit.addEventListener('mouseover', (e)=>{
+	comprasButtonFakeQuit.style.animation = 'quitHover 1s forwards';
+	e.stopPropagation
+})
+
+comprasButtonFakeQuit.addEventListener('mouseout', ()=>{
+	comprasButtonFakeQuit.style.animation = 'quitOut 1s forwards';
+	e.stopPropagation
+})
+
 comprasButtonFakeQuit.addEventListener('click', ()=>{
 	comprasButtonFakeContainer.style.display = 'none';
-	body.style.height = '0';
 	body.style.overflowY = 'initial';
+	audioCDC.pause();
 })

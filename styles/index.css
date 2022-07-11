@@ -696,8 +696,10 @@ html {
 .compras-button-fake {
 	width: 40%;
 	height: 300px;
-	background-color: #eee;
+	background-color: #222;
 	position: fixed;
+	border-radius: 15px;
+	border: 4px solid #ef2;
 }
 
 .compras-button-fake-quit-container {
@@ -712,15 +714,36 @@ html {
 	margin: 10px;
 	border-radius: 50%;
 	padding: 5px;
+	filter: invert();
 }
 
 .compras-button-fake-quit:hover {
 	cursor: pointer;
-	background-color: #d10000;
+	filter:invert(0);
+	background-color: #ef2;
 }
 
 .compras-button-fake-quit img {
 	width: 100%;
+}
+
+@keyframes quitHover {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes quitOut {
+	0% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(0);
+
+	}
 }
 
 .compras-button-fake-text-container {
@@ -732,7 +755,7 @@ html {
 
 .compras-button-fake-text {
 	font-size: 30px;
-	color: #d10000;
+	color: #ff0000;
 	margin: 15px 15px;
 	text-align: center;
 }
@@ -840,7 +863,6 @@ html {
 
 #fifth-article {
 	width: 100%;
-	height: 4000px;
 	background-color: #888
 }
 
@@ -897,4 +919,16 @@ html {
 	100% {
 		opacity:1;
 	}
+}
+
+#sixth-article {
+	width: 100%;
+	height: 4000px;
+	background-color: #888;
+}
+
+.footer-container {
+	width: 100%;
+	background: #1f1f1f;
+	border-top: 5px solid #ef2;
 }
