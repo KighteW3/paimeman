@@ -697,7 +697,44 @@ html {
 	width: 40%;
 	height: 300px;
 	background-color: #eee;
-	position: fiexd;
+	position: fixed;
+}
+
+.compras-button-fake-quit-container {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	width: 100%;
+}
+
+.compras-button-fake-quit {
+	width: 30px;
+	margin: 10px;
+	border-radius: 50%;
+	padding: 5px;
+}
+
+.compras-button-fake-quit:hover {
+	cursor: pointer;
+	background-color: #d10000;
+}
+
+.compras-button-fake-quit img {
+	width: 100%;
+}
+
+.compras-button-fake-text-container {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.compras-button-fake-text {
+	font-size: 30px;
+	color: #d10000;
+	margin: 15px 15px;
+	text-align: center;
 }
 
 .compras-container {
