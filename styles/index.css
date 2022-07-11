@@ -921,14 +921,41 @@ html {
 	}
 }
 
-#sixth-article {
+#footer {
 	width: 100%;
-	height: 4000px;
 	background-color: #888;
+	color: #1f1f1f;
 }
 
-.footer-container {
+.footer-content-container {
 	width: 100%;
 	background: #1f1f1f;
 	border-top: 5px solid #ef2;
+	display: flex;
+	justify-content: center;
+}
+
+.footer-content {
+	background-color: #ef2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.footer-content-children {
+	width: 100%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 40px;
+}
+
+.footer-content-children h4 {
+	margin: 0;
+}
+
+.footer-content-children a {
+	color: #1f1f1f;
 }
