@@ -156,7 +156,6 @@ html {
 
 .cover-proyect-title {
 	background-color: #ef2;
-	width: 600px;
 	position: absolute;
 	text-align: center;
 	font-size: 20px;
@@ -165,6 +164,7 @@ html {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	border-radius: 13px;
 }
 
 @keyframes coverTitleFall {
@@ -172,12 +172,12 @@ html {
 		transform: translate(0,-1000px);
 	}
 	to {
-		transform: translate(0,-40px);
+		transform: translate(0);
 	}
 }
 
 .cover-proyect-title h1 {
-	margin: 7px;
+	margin: 15px;
 }
 
 .about-proyect-container {
