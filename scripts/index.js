@@ -41,7 +41,7 @@ let comprasButtonFakeQuit = document.querySelector('.compras-button-fake-quit')
 let whoamiH2 = document.querySelector(".whoami-h2");
 let whoamiText = document.querySelector(".whoami-p");
 
-let audioCDC = new Audio('./sources/videos/caramelo_de_chocolate.mp3')
+let audioCDC = new Audio('./sources/audios/Sori.m4a')
 
 const multipleNodeColorConverter = (varName,color)=>{
 	for (let i=0; i<varName.length; i++) {
@@ -85,9 +85,11 @@ document.addEventListener("scroll", ()=>{
 		muñecoPesao.style.opacity = "1";
 		muñecoPesaoImg.style.transform = "rotate(30deg)";
 		setTimeout(muñecoPesaoDiálogoDisplay, 500)
-	} else if (rectSecondArticle.top != 226 && rectSecondArticle.top != (-1076)) {
+	} else {
 		muñecoPesao.style.animation = "muñecoPesaoHide 1s forwards";
 		muñecoPesao.style.opacity = "1";
+		setTimeout(()=>{
+		}, 100)
 		setTimeout(muñecoPesaoDiálogoHide, 500)
 	}
 	let rectThirtyArticle = thirdArticle.getBoundingClientRect();
@@ -218,12 +220,10 @@ for (i=0; i<comprasButton.length; i++) {
 
 comprasButtonFakeQuit.addEventListener('mouseover', (e)=>{
 	comprasButtonFakeQuit.style.animation = 'quitHover 1s forwards';
-	e.stopPropagation
 })
 
 comprasButtonFakeQuit.addEventListener('mouseout', ()=>{
 	comprasButtonFakeQuit.style.animation = 'quitOut 1s forwards';
-	e.stopPropagation
 })
 
 comprasButtonFakeQuit.addEventListener('click', ()=>{
