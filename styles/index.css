@@ -1008,6 +1008,33 @@ html {
 	}
 }
 
+@media only screen and (max-width: 794px) {
+	.characters-display-container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.characters-containers {
+		width: 80%;
+	}
+	.characters-display {
+		width: 100%;
+		grid-template-rows: 300px 1fr 70px;
+		font-size: 25px;
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	.characters-containers {
+		width: 100%;
+	}
+	.characters-display {
+		width: 100%;
+	}
+	.characters-text-2 {
+		text-align: start;
+	}
+}
+
 @media only screen and (min-height: 800px) {
 	.nav-links {
 		font-size: 27px;
@@ -1020,5 +1047,11 @@ html {
 	}
 	.contact-list ul {
 		width: 100%;
+	}
+	#muñeco-pesao {
+		top: 160px;
+	}
+	#muñeco-pesao-diálogo {
+		top: 115px;
 	}
 }
