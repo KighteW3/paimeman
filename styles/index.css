@@ -1040,6 +1040,9 @@ html {
 }
 
 @media only screen and (max-width: 820px) {
+	.about-proyect-title {
+		margin: 0 15px;
+	}
 	.characters-display-container {
 		flex-direction: column;
 		align-items: center;
@@ -1057,6 +1060,9 @@ html {
 @media only screen and (max-width: 772px) {
 	.cover-proyect-img-2 {
 		display: none;
+	}
+	.edición-plate-1-1-img-container {
+		width: 70%;
 	}
 	.edición-plate-2 {
 		width: 100%;

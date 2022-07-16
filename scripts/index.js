@@ -56,7 +56,7 @@ const multipleNodeSizeConverter = (varName,size)=>{
 
 // Event to execute scroll functions on the hole document.
 
-if (screen.height <= 800) {
+if (screen.width >= 800 && screen.height <= 800) {
 
 	document.addEventListener("scroll", ()=>{
 		const scrollY = window.scrollY;
@@ -235,7 +235,7 @@ if (screen.height <= 800) {
 		html.style.overflowX = 'hidden';
 		audioCDC.pause();
 	})
-} else if (screen.height >= 800) {
+} else if (screen.width <= 800 || screen.height >= 800) {
 
 	document.addEventListener("scroll", ()=>{
 		const scrollY = window.scrollY;
@@ -395,7 +395,7 @@ if (screen.height <= 800) {
 			comprasButtonFakeContainer.style.display = 'flex';
 			body.style.height = '100%';
 			html.style.overflowY = 'hidden';
-			html.style.overflowX = 'initial';
+			html.style.overflowX = 'hidden';
 			audioCDC.play();
 		})
 	}
