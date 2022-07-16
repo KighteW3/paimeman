@@ -814,7 +814,7 @@ html {
 	background: #1f1f1f;
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 50% 1fr 50%;
+	grid-template-rows: auto 1fr auto;
 	border-radius: 13px;
 	box-sizing: border-box;
 	padding: 40px;
@@ -1073,6 +1073,12 @@ html {
 	}
 	.compras-button-fake {
 		width: 80%;
+	}
+}
+
+@media only screen and  (max-width: 726px) {
+	.nav-child {
+		display: none;
 	}
 }
 
