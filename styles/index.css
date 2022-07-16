@@ -1058,6 +1058,9 @@ html {
 }
 
 @media only screen and (max-width: 772px) {
+	.cover-proyect-img-1 {
+		width: 90%;
+	}
 	.cover-proyect-img-2 {
 		display: none;
 	}
@@ -1080,6 +1083,9 @@ html {
 	.nav-child {
 		display: none;
 	}
+	.edición-plate-1-1-img-container {
+		width: 230px;
+	}
 }
 
 @media only screen and (max-width: 580px) {
@@ -1091,6 +1097,12 @@ html {
 	}
 	.characters-text-2 {
 		text-align: start;
+	}
+	.galería-introduction {
+		clip-path:polygon(0 30%,  50% 50%, 100% 30%, 100% 100%, 0 100%);
+	}
+	.edición-plate-1 {
+		width: 100%;
 	}
 }
 
