@@ -957,6 +957,7 @@ html {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	text-align: center;
 }
 
 .footer-content-children {
@@ -985,6 +986,24 @@ html {
 	}
 	.compras-button-fake {
 		width: 60%;
+	}
+	.nav-links {
+		font-size: 27px;
+	}
+	.nav-link-list {
+		width: 70%;
+	}
+	.contact-list {
+		width: 40%;
+	}
+	.contact-list ul {
+		width: 100%;
+	}
+	#muñeco-pesao {
+		top: 160px;
+	}
+	#muñeco-pesao-diálogo {
+		top: 115px;
 	}
 }
 
@@ -1125,6 +1144,12 @@ html {
 	.edición-plate-1-1-img-container {
 		width: 230px;
 	}
+	.compras-title-h2 {
+		margin: 80px;
+	}
+	.whoami {
+		width: 100%;
+	}
 }
 
 @media only screen and (max-width: 580px) {
@@ -1146,12 +1171,23 @@ html {
 	.edición-plate-1 {
 		width: 100%;
 	}
+	.compras-title-h2 {
+		margin: 80px 20px;
+		width: 100%;
+	}
+	.whoami-h2 {
+		font-size: 4em;
+	}
 }
 
 @media only screen and (max-width: 542px) {
+	.edición-plate-2-1-text {
+		width: 100%;
+	}
 	.compras-plates {
 		width: 100%;
 		margin: 50px 0;
+		padding: 40px 10px;
 	}
 }
 
