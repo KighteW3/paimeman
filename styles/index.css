@@ -1041,7 +1041,11 @@ html {
 
 @media only screen and (max-width: 820px) {
 	.about-proyect-title {
-		margin: 0 15px;
+		font-size: 25px;
+	}
+	.about-proyect-text {
+		width: 98%;
+		font-size: 23px;
 	}
 	.characters-display-container {
 		flex-direction: column;
@@ -1105,6 +1109,10 @@ html {
 		width: 100%;
 		border-radius: 0;
 	}
+	.compras-title-h2 {
+		width: 80%;
+		font-size: 40px;
+	}
 	.compras-button-fake {
 		width: 80%;
 	}
@@ -1137,6 +1145,13 @@ html {
 	}
 	.edición-plate-1 {
 		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 542px) {
+	.compras-plates {
+		width: 100%;
+		margin: 50px 0;
 	}
 }
 
