@@ -99,6 +99,19 @@ html {
 	width: 100%;
 	height: 100%;
 	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+#nav-responsive-img {
+	height: 80%;
+}
+
+.nav-responsive-button-container {
+	position: absolute;
+	height: inherit;
+	width: inherit;
+	display: none;
 	justify-content: start;
 	align-items: center;
 }
@@ -1146,9 +1159,6 @@ html {
 }
 
 @media only screen and  (max-width: 726px) {
-	.nav-child {
-		display: none;
-	}
 	.edición-plate-1-1-img-container {
 		width: 230px;
 	}

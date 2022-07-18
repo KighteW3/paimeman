@@ -2,6 +2,7 @@
 
 let viewport = document.getElementById("viewport");
 
+let navChild = document.querySelectorAll('.nav-child');
 let navBar = document.querySelector(".nav");
 let navBarLinks = document.querySelectorAll(".nav-links");
 
@@ -52,8 +53,6 @@ const multipleNodeSizeConverter = (varName,size)=>{
 	}
 }
 
-whoamiText.innerHTML = `The screen width is: ${screen.width}.`;
-
 // Event to execute scroll functions on the hole document.
 
 if (screen.width >= 800 && screen.height <= 800) {
@@ -81,7 +80,6 @@ if (screen.width >= 800 && screen.height <= 800) {
 		edicionesAnimation(1);
 		edicionesAnimation(2);
 		let rectSecondArticle = secondArticle.getBoundingClientRect();
-		console.log(rectSecondArticle.bottom);
 		if (rectSecondArticle.top <= 226 && rectSecondArticle.bottom >= (200)) {
 			muñecoPesao.style.animation = "muñecoPesaoDisplay 1s forwards";
 			muñecoPesao.style.display = "inline";
@@ -235,7 +233,7 @@ if (screen.width >= 800 && screen.height <= 800) {
 		html.style.overflowX = 'hidden';
 		audioCDC.pause();
 	})
-} else if (screen.width <= 800 || screen.height >= 800) {
+} else if (screen.width >= 726 && screen.width <= 800 && screen.height >= 800) {
 	alert('Atención: esta página sigue en desarrollo, por lo tanto está incompleta y puede presentar errores.')
 
 	document.addEventListener("scroll", ()=>{
@@ -261,7 +259,6 @@ if (screen.width >= 800 && screen.height <= 800) {
 		edicionesAnimation(1);
 		edicionesAnimation(2);
 		let rectSecondArticle = secondArticle.getBoundingClientRect();
-		console.log(rectSecondArticle.bottom);
 		if (rectSecondArticle.top <= 226 && rectSecondArticle.bottom >= (200)) {
 			muñecoPesao.style.animation = "muñecoPesaoDisplay 1s forwards";
 			muñecoPesao.style.display = "inline";
@@ -418,7 +415,10 @@ if (screen.width >= 800 && screen.height <= 800) {
 }else if (screen.width <= 726) {
 	alert('Atención: esta página sigue en desarrollo, por lo tanto está incompleta y puede presentar errores.')
 
+	navChild[0].style.display = 'none';
+	navChild[1].style.display = 'none';
 	document.querySelector('.nav-responsive-img-container').style.display = "flex";
+	document.querySelector('.nav-responsive-button-container').style.display = "flex";
 	document.addEventListener("scroll", ()=>{
 		const scrollY = window.scrollY;
 		if (scrollY !== 0) {
@@ -442,7 +442,6 @@ if (screen.width >= 800 && screen.height <= 800) {
 		edicionesAnimation(1);
 		edicionesAnimation(2);
 		let rectSecondArticle = secondArticle.getBoundingClientRect();
-		console.log(rectSecondArticle.bottom);
 		if (rectSecondArticle.top <= 226 && rectSecondArticle.bottom >= (200)) {
 			muñecoPesao.style.animation = "muñecoPesaoDisplay 1s forwards";
 			muñecoPesao.style.display = "inline";
