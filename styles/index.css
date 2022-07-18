@@ -95,6 +95,14 @@ html {
 	padding: 0;
 }
 
+.nav-responsive-img-container {
+	width: 100%;
+	height: 100%;
+	display: none;
+	justify-content: start;
+	align-items: center;
+}
+
 #first-article {
 	background-color: #222;
 }
@@ -1063,7 +1071,7 @@ html {
 		font-size: 25px;
 	}
 	.about-proyect-text {
-		width: 98%;
+		width: 95%;
 		font-size: 23px;
 	}
 	.characters-display-container {
