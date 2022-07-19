@@ -7,7 +7,7 @@ let navBar = document.querySelector(".nav");
 let navBarLinks = document.querySelectorAll(".nav-links");
 
 let navResponsiveMenuContainer = document.querySelector('.nav-responsive-menu-container');
-let navResponsiveLinks = document.querySelectorAll('nav-responsive-links');
+let navResponsiveLinks = document.querySelectorAll('.nav-responsive-links');
 let navResponsiveImgContainer = document.querySelector('.nav-responsive-img-container');
 let navResponsiveImg = document.getElementById('nav-responsive-img');
 let navResponsiveButtonContainer = document.querySelector('.nav-responsive-button-container');
@@ -173,7 +173,6 @@ if (screen.width >= 800) {
 		}
 	})
 	
-	let textNone2 = true;
 	charactersButton[1].addEventListener("click", ()=>{
 		if (textNone[1] === true) {
 			displayCharacterInfo(1);
@@ -352,7 +351,6 @@ if (screen.width >= 800) {
 		}
 	})
 	
-	let textNone2 = true;
 	charactersButton[1].addEventListener("click", ()=>{
 		if (textNone[1] === true) {
 			displayCharacterInfo(1);
@@ -574,7 +572,6 @@ if (screen.width >= 800) {
 		}
 	})
 	
-	let textNone2 = true;
 	charactersButton[1].addEventListener("click", ()=>{
 		if (textNone[1] === true) {
 			displayCharacterInfo(1);
