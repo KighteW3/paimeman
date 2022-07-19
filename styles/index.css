@@ -95,6 +95,25 @@ html {
 	padding: 0;
 }
 
+.nav-responsive-menu-container {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	background: #2225;
+	display: none;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	z-index: 900;
+}
+
+.nav-responsive-links {
+	color: #fff;
+	font-size: 30px;
+	text-decoration: none;
+}
+
 .nav-responsive-img-container {
 	width: 100%;
 	height: 100%;
@@ -120,6 +139,7 @@ html {
 	height: 56%;
 	width: auto;
 	margin-left: 20px;
+	z-index: 1000;
 }
 
 #first-article {
@@ -1165,6 +1185,15 @@ html {
 }
 
 @media only screen and  (max-width: 726px) {
+	.nav-child {
+		display: none;
+	}
+	.nav-responsive-img-container {
+		display: flex;
+	}
+	.nav-responsive-button-container {
+		display: flex;
+	}
 	.edición-plate-1-1-img-container {
 		width: 230px;
 	}
@@ -1215,6 +1244,12 @@ html {
 	}
 }
 
+@media only screen and (max-width: 370px) {
+	.nav-responsive-img-container {
+		display: none;
+	}
+}
+
 @media only screen and (min-height: 800px) {
 	.nav-links {
 		font-size: 27px;
@@ -1233,5 +1268,27 @@ html {
 	}
 	#muñeco-pesao-diálogo {
 		top: 115px;
+	}
+}
+
+@media only screen and (min-height: 1000px) {
+	.nav {
+		height: 120px;
+	}
+	@keyframes navMinimize {
+		0% {
+			height: 120;
+		}
+		100% {
+			height: 100px;
+		}
+	}
+	@keyframes navMaximize {
+		0% {
+			height: 100px;
+		}
+		100% {
+			height: 120px;
+		}
 	}
 }

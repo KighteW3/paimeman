@@ -6,7 +6,8 @@ let navChild = document.querySelectorAll('.nav-child');
 let navBar = document.querySelector(".nav");
 let navBarLinks = document.querySelectorAll(".nav-links");
 
-
+let navResponsiveMenuContainer = document.querySelector('.nav-responsive-menu-container');
+let navResponsiveLinks = document.querySelectorAll('nav-responsive-links');
 let navResponsiveImgContainer = document.querySelector('.nav-responsive-img-container');
 let navResponsiveImg = document.getElementById('nav-responsive-img');
 let navResponsiveButtonContainer = document.querySelector('.nav-responsive-button-container');
@@ -61,7 +62,7 @@ const multipleNodeSizeConverter = (varName,size)=>{
 
 // Event to execute scroll functions on the hole document.
 
-if (screen.width >= 800 && screen.height <= 800) {
+if (screen.width >= 800) {
 
 	document.addEventListener("scroll", ()=>{
 		const scrollY = window.scrollY;
@@ -421,10 +422,6 @@ if (screen.width >= 800 && screen.height <= 800) {
 }else if (screen.width <= 726) {
 	alert('Atención: esta página sigue en desarrollo, por lo tanto está incompleta y puede presentar errores.')
 
-	navChild[0].style.display = 'none';
-	navChild[1].style.display = 'none';
-	navResponsiveImgContainer.style.display = 'flex';
-	navResponsiveButtonContainer.style.display = 'flex';
 	document.addEventListener("scroll", ()=>{
 		const scrollY = window.scrollY;
 		if (scrollY !== 0) {
@@ -481,6 +478,7 @@ if (screen.width >= 800 && screen.height <= 800) {
 		navBar.style.background = "#0005";
 		navBar.style.animation = "navMinimize 1s forwards";
 		navResponsiveButton.style.filter = 'invert()';
+		multipleNodeColorConverter(navBarLinks,"#fff");
 		
 	}
 	
@@ -493,15 +491,43 @@ if (screen.width >= 800 && screen.height <= 800) {
 
 	let navResponsiveButtonClicked = false;
 
+	const menuResponsiveClicked = ()=> {
+		navResponsiveMenuContainer.style.display = 'flex';
+	}
+
+	const menuResponsiveHide = ()=> {
+		navResponsiveButton.src = 'sources/img/Inicio/manu.webp';
+		navResponsiveMenuContainer.style.display = 'none';
+		navResponsiveButton.style.background = 'none';
+		navResponsiveButton.style.borderRadius = 'none';
+		html.style.overflowY = 'initial';
+		html.style.overflowX = 'hidden';
+		navBar.style.background = '#0005';
+		navResponsiveButtonClicked = false;
+	}
+
 	navResponsiveButton.addEventListener('click', ()=>{
 		if (navResponsiveButtonClicked === false) {
 			navResponsiveButton.src = 'sources/img/Comprar/X.png'
+			navResponsiveButton.style.background = '#fff';
+			navResponsiveButton.style.borderRadius = '50%';
+			menuResponsiveClicked();
+			body.style.height = '100%';
+			html.style.overflowY = 'hidden';
+			html.style.overflowX = 'hidden';
+			navBar.style.background = 'none';
 			navResponsiveButtonClicked = true;
 		}else if (navResponsiveButtonClicked === true) {
-			navResponsiveButton.src = 'sources/img/Inicio/manu.webp';
-			navResponsiveButtonClicked = false;
+			menuResponsiveHide();
 		}
 	})
+	
+	for (i = 0; i<navResponsiveLinks.length; i++) {
+		let x = i;
+		navResponsiveLinks[x].addEventListener('click', ()=>{
+			menuResponsiveHide();
+		})
+	}
 	
 	const paimemanTitleFall = ()=>{
 		coverTitle.style.animation = "coverTitleFall 0.6s forwards";
