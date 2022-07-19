@@ -6,6 +6,12 @@ let navChild = document.querySelectorAll('.nav-child');
 let navBar = document.querySelector(".nav");
 let navBarLinks = document.querySelectorAll(".nav-links");
 
+
+let navResponsiveImgContainer = document.querySelector('.nav-responsive-img-container');
+let navResponsiveImg = document.getElementById('nav-responsive-img');
+let navResponsiveButtonContainer = document.querySelector('.nav-responsive-button-container');
+let navResponsiveButton = document.getElementById('nav-responsive-button');
+
 let coverTitleContainer = document.querySelector(".cover-proyect-title-container");
 let coverTitle = document.querySelector(".cover-proyect-title");
 let aboutProyectTextContainer = document.querySelector(".about-proyect-text-container");
@@ -417,8 +423,8 @@ if (screen.width >= 800 && screen.height <= 800) {
 
 	navChild[0].style.display = 'none';
 	navChild[1].style.display = 'none';
-	document.querySelector('.nav-responsive-img-container').style.display = "flex";
-	document.querySelector('.nav-responsive-button-container').style.display = "flex";
+	navResponsiveImgContainer.style.display = 'flex';
+	navResponsiveButtonContainer.style.display = 'flex';
 	document.addEventListener("scroll", ()=>{
 		const scrollY = window.scrollY;
 		if (scrollY !== 0) {
@@ -474,6 +480,7 @@ if (screen.width >= 800 && screen.height <= 800) {
 		navBar.style.top = "0";
 		navBar.style.background = "#0005";
 		navBar.style.animation = "navMinimize 1s forwards";
+		navResponsiveButton.style.filter = 'invert()';
 		
 	}
 	
@@ -481,7 +488,20 @@ if (screen.width >= 800 && screen.height <= 800) {
 		navBar.style.position = "initial"
 		navBar.style.background = "#efefef";
 		navBar.style.animation = "navMaximize 1s forwards";
+		navResponsiveButton.style.filter = 'none';
 	}
+
+	let navResponsiveButtonClicked = false;
+
+	navResponsiveButton.addEventListener('click', ()=>{
+		if (navResponsiveButtonClicked === false) {
+			navResponsiveButton.src = 'sources/img/Comprar/X.png'
+			navResponsiveButtonClicked = true;
+		}else if (navResponsiveButtonClicked === true) {
+			navResponsiveButton.src = 'sources/img/Inicio/manu.webp';
+			navResponsiveButtonClicked = false;
+		}
+	})
 	
 	const paimemanTitleFall = ()=>{
 		coverTitle.style.animation = "coverTitleFall 0.6s forwards";

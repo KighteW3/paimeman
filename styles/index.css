@@ -116,6 +116,12 @@ html {
 	align-items: center;
 }
 
+#nav-responsive-button {
+	height: 56%;
+	width: auto;
+	margin-left: 20px;
+}
+
 #first-article {
 	background-color: #222;
 }
