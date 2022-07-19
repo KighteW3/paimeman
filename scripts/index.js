@@ -493,6 +493,14 @@ if (screen.width >= 800) {
 
 	const menuResponsiveClicked = ()=> {
 		navResponsiveMenuContainer.style.display = 'flex';
+		navResponsiveButton.src = 'sources/img/Comprar/X.png'
+		navResponsiveButton.style.background = '#fff';
+		navResponsiveButton.style.borderRadius = '50%';
+		body.style.height = '100%';
+		html.style.overflowY = 'hidden';
+		html.style.overflowX = 'hidden';
+		navBar.style.background = 'none';
+		navResponsiveButtonClicked = true;
 	}
 
 	const menuResponsiveHide = ()=> {
@@ -502,21 +510,17 @@ if (screen.width >= 800) {
 		navResponsiveButton.style.borderRadius = 'none';
 		html.style.overflowY = 'initial';
 		html.style.overflowX = 'hidden';
+		if (scrollY === 0){
+		navBar.style.background = '#efefef';
+		} else {
 		navBar.style.background = '#0005';
+		}
 		navResponsiveButtonClicked = false;
 	}
 
 	navResponsiveButton.addEventListener('click', ()=>{
 		if (navResponsiveButtonClicked === false) {
-			navResponsiveButton.src = 'sources/img/Comprar/X.png'
-			navResponsiveButton.style.background = '#fff';
-			navResponsiveButton.style.borderRadius = '50%';
 			menuResponsiveClicked();
-			body.style.height = '100%';
-			html.style.overflowY = 'hidden';
-			html.style.overflowX = 'hidden';
-			navBar.style.background = 'none';
-			navResponsiveButtonClicked = true;
 		}else if (navResponsiveButtonClicked === true) {
 			menuResponsiveHide();
 		}
