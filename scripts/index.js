@@ -420,7 +420,6 @@ if (screen.width >= 1600) {
 		audioCDC.pause();
 	})
 } else if (screen.width >= 726 && screen.width <= 800 && screen.height >= 800) {
-	alert('Atención: esta página sigue en desarrollo, por lo tanto está incompleta y puede presentar errores.')
 
 	document.addEventListener("scroll", ()=>{
 		const scrollY = window.scrollY;
@@ -598,7 +597,6 @@ if (screen.width >= 1600) {
 		audioCDC.pause();
 	})
 }else if (screen.width <= 726) {
-	alert('Atención: esta página sigue en desarrollo, por lo tanto está incompleta y puede presentar errores.')
 
 	document.addEventListener("scroll", ()=>{
 		const scrollY = window.scrollY;

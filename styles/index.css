@@ -1057,6 +1057,18 @@ html {
 	.characters-text {
 		font-size: 25px;
 	}
+	.characters-button {
+		font-size: 20px;
+	}
+	.edición-plate-1-1-img {
+		width: 100%;
+	}
+	.edición-plate-2-1-text p {
+		font-size: 35px;
+	}
+	.whoami-p {
+		font-size: 35px;
+	}
 }
 
 @media only screen and (max-width: 946px) {
