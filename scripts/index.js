@@ -104,7 +104,8 @@ if (screen.width >= 1600) {
 			setTimeout(muñecoPesaoDiálogoHide, 500)
 		}
 		let rectThirtyArticle = thirdArticle.getBoundingClientRect();
-		if (rectThirtyArticle.top <= 265 && rectThirtyArticle.top >= -11) {
+		console.log(rectThirtyArticle.top);
+		if (rectThirtyArticle.top <= 380.796875 && rectThirtyArticle.top >= -11) {
 			galeríaIntroductionTitle.style.animation = "galeríaIntroductionTitle 1s infinite alternate"
 		}
 		let rectWhoamiH2 = whoamiH2.getBoundingClientRect();
@@ -635,7 +636,7 @@ if (screen.width >= 1600) {
 			setTimeout(muñecoPesaoDiálogoHide, 500)
 		}
 		let rectThirtyArticle = thirdArticle.getBoundingClientRect();
-		if (rectThirtyArticle.top <= 265 && rectThirtyArticle.top >= -11) {
+		if (rectThirtyArticle.top <= 380.796875 && rectThirtyArticle.top >= -11) {
 			galeríaIntroductionTitle.style.animation = "galeríaIntroductionTitle 1s infinite alternate"
 		}
 		let rectWhoamiH2 = whoamiH2.getBoundingClientRect();
