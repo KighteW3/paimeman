@@ -967,6 +967,7 @@ html {
 	color: #bbb;
 	font-size: 25px;
 	opacity: 0;
+	margin: 50px 20px;
 }
 
 @keyframes whoamiH2Appear {
