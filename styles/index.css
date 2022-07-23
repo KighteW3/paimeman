@@ -603,17 +603,18 @@ html {
 	justify-content: center;
 	align-items: center;
 	color: #efefef;
-	display: none;
+	display: flex;
+	opacity: 0;
 	transform: translate(1000px,0);
 }
 
 @keyframes ediciónPlateDisplay {
 	from {
-		display: flex;
+		opacity: 0;
 		transform: translate(1000px,0);
 	}
 	to {
-		display: flex;
+		opacity: 1;
 		transform: translate(0);
 	}
 }
@@ -1071,6 +1072,9 @@ html {
 	}
 	.edición-plate-2-1-text p {
 		font-size: 35px;
+	}
+	.galería-introduction-title {
+		font-size: 3.5em;
 	}
 	.whoami-p {
 		font-size: 35px;
