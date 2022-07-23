@@ -75,7 +75,7 @@ if (screen.width >= 1600) {
 			navBarMaximize();
 		}
 		let rectCoverTitle = coverTitleContainer.getBoundingClientRect();
-		if (rectCoverTitle.top <= 600 && rectCoverTitle.top >= 20) {
+		if (rectCoverTitle.top <= 800 && rectCoverTitle.top >= 20) {
 			paimemanTitleFall();
 		}
 		let rectTextDisplay = aboutProyectTextContainer.getBoundingClientRect();

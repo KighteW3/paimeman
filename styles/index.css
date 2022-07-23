@@ -1052,6 +1052,12 @@ html {
 			height: 100px;
 		}
 	}
+	.cover-proyect-img {
+		width: 25%;
+	}
+	.cover-proyect-img-2 {
+		width: 20%;
+	}
 	.cover-proyect-title{
 		font-size: 25px;
 	}
