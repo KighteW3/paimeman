@@ -677,6 +677,7 @@ if (screen.width >= 1600) {
 		html.style.overflowY = 'hidden';
 		html.style.overflowX = 'hidden';
 		navBar.style.background = 'none';
+		navResponsiveImg.style.display = 'none';
 		navResponsiveButtonClicked = true;
 	}
 
@@ -692,6 +693,7 @@ if (screen.width >= 1600) {
 		} else {
 		navBar.style.background = '#0005';
 		}
+		navResponsiveImg.style.display = 'inline';
 		navResponsiveButtonClicked = false;
 	}
 
