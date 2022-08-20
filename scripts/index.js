@@ -105,15 +105,15 @@ if (screen.width >= 1600) {
 		}
 		let rectThirtyArticle = thirdArticle.getBoundingClientRect();
 		console.log(rectThirtyArticle.top);
-		if (rectThirtyArticle.top <= 380.796875 && rectThirtyArticle.top >= -11) {
+		if (rectThirtyArticle.top <= 700 && rectThirtyArticle.top >= -11) {
 			galeríaIntroductionTitle.style.animation = "galeríaIntroductionTitle 1s infinite alternate"
 		}
 		let rectWhoamiH2 = whoamiH2.getBoundingClientRect();
-		if (rectWhoamiH2.top <= 368 && rectWhoamiH2.top >= 55) {
+		if (rectWhoamiH2.top <= 568 && rectWhoamiH2.top >= 55) {
 			whoamiH2.style.animation = "whoamiH2Appear 1s forwards";
 		}
 		let rectWhoamiText = whoamiText.getBoundingClientRect();
-		if (rectWhoamiText.top <= 386 && rectWhoamiText.top >= 44) {
+		if (rectWhoamiText.top <= 586 && rectWhoamiText.top >= 44) {
 			whoamiText.style.animation = "whoamiTextAppear 1s forwards";
 		}
 	})
