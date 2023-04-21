@@ -47,8 +47,6 @@ let comprasButtonFakeQuit = document.querySelector('.compras-button-fake-quit')
 let whoamiH2 = document.querySelector(".whoami-h2");
 let whoamiText = document.querySelector(".whoami-p");
 
-let audioCDC = new Audio('./sources/audios/Sori.m4a')
-
 const multipleNodeColorConverter = (varName,color)=>{
 	for (let i=0; i<varName.length; i++) {
 		varName[i].style.color = `${color}`;
